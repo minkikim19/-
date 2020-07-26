@@ -1,0 +1,1 @@
+INSERT INTO AUTHOR (id, name, profile) VALUES(SEQ_AUTHOR.nextval, 'kim', 'developer');
