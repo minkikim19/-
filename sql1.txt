@@ -1,0 +1,26 @@
+SELECT topic.id TOPIC_ID, title, name FROM topic
+	LEFT JOIN author ON topic.author_id = author.id
+;
+
+
+SELECT
+	T.id TOPIC_ID,
+	title,
+	name
+FROM topic T
+	LEFT JOIN author A
+	ON T.author_id = A.ID
+WHERE
+	T.id = 1
+;
+
+ -> title의 id값이 1인 것만 추출 된다.
+
+
+ CREATE TABLE topic(
+  id NUMBER NOT NULL,
+  title VARCHAR2(50)NOT NULL,
+  description VARCHAR2(4000),
+  created DATE NOT NULL,
+  CONSTRAINT PK_TOPIC PRIMARY KEY(id)
+  );
